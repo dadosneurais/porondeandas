@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='lupa.ico') }}" type="lupa/x-icon">
+    <title>Pesquisa</title>
+    <style>
+        #loading {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        .url {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pesquisar Usuário</h1>
+    <h3>Aguarde, sua pesquisa pode levar alguns segundos</h3>
+
+    <form id="searchForm">
+        <label for="username">Nome de usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Pesquisar</button>
+    </form>
+
+    <div id="loading"></div>
+    <div id="result"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <footer>
+        Todos os direitos reservados &copy; - Peterson - 2025.
+    </footer>
+</body>
+</html>
